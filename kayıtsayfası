@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Sayfası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 20px;
+            color: #333;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #b2ebf2;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"] {
+            margin-top: 10px;
+        }
+        button {
+            background-color: #00796b;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Kayıt Formu</h2>
+    <form id="registrationForm" action="https://hooks.airtable.com/workflows/v1/genericWebhook/appRdNYOc5nWAqG9C/wflTG4UVzRq7QH81q/wtruwXlanILT7Z4hF" method="POST" onsubmit="return showAlert()">
+        <div class="form-section">
+            <label for="fullName">Adı Soyadı:</label>
+            <input type="text" id="fullName" name="fullName" required><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="school">Okul:</label>
+            <input type="text" id="school" name="school" required><br>
+
+            <label for="branch">Branş:</label>
+            <input type="text" id="branch" name="branch" required><br>
+        </div>
+
+        <h3>Eğitim Takvimi</h3>
+        <table>
+            <tr>
+                <th>Saat</th>
+                <th>8/19/2024 Pazartesi</th>
+                <th>8/20/2024 Salı</th>
+                <th>8/21/2024 Çarşamba</th>
+                <th>8/22/2024 Perşembe</th>
+                <th>8/23/2024 Cuma</th>
+            </tr>
+            <tr>
+                <td>10.00-10.30</td>
+                <td>
+                    İntro<br>
+                    <input type="checkbox" name="course" value="İntro 8/19 10.00-10.30">
+                </td>
+                <td>
+                    İntro<br>
+                    <input type="checkbox" name="course" value="İntro 8/20 10.00-10.30">
+                </td>
+                <td>
+                    İntro<br>
+                    <input type="checkbox" name="course" value="İntro 8/21 10.00-10.30">
+                </td>
+                <td>
+                    İntro<br>
+                    <input type="checkbox" name="course" value="İntro 8/22 10.00-10.30">
+                </td>
+                <td>
+                    İntro<br>
+                    <input type="checkbox" name="course" value="İntro 8/23 10.00-10.30">
+                </td>
+            </tr>
+            <tr>
+                <td>10.45-11.15</td>
+                <td>
+                    Twin Admin Platformu<br>
+                    <input type="checkbox" name="course" value="Twin Admin Platformu 8/19 10.45-11.15">
+                </td>
+                <td>
+                    AI Modülü (Teorik)<br>
+                    <input type="checkbox" name="course" value="AI Modülü (Teorik) 8/20 10.45-11.15">
+                </td>
+                <td>
+                    Twin ve Yeni Öğretim Programları<br>
+                    <input type="checkbox" name="course" value="Twin ve Yeni Öğretim Programları 8/21 10.45-11.15">
+                </td>
+                <td>
+                    Twin ve 4. Sınıf Fen Bilimleri Dersi<br>
+                    <input type="checkbox" name="course" value="Twin ve 4. Sınıf Fen Bilimleri Dersi 8/22 10.45-11.15">
+                </td>
+                <td>
+                    Twin ve NGSS<br>
+                    <input type="checkbox" name="course" value="Twin ve NGSS 8/23 10.45-11.15">
+                </td>
+            </tr>
+            <tr>
+                <td>11.30-12.00</td>
+                <td>
+                    Twin Öğretmen Platformu<br>
+                    <input type="checkbox" name="course" value="Twin Öğretmen Platformu 8/19 11.30-12.00">
+                </td>
+                <td>
+                    AI Modülü (Atölye)<br>
+                    <input type="checkbox" name="course" value="AI Modülü (Atölye) 8/20 11.30-12.00">
+                </td>
+                <td>
+                    Twin ve Okul Öncesi Eğitim<br>
+                    <input type="checkbox" name="course" value="Twin ve Okul Öncesi Eğitim 8/21 11.30-12.00">
+                </td>
+                <td>
+                    Twin ve 5. Sınıf Fen Bilimleri Dersi<br>
+                    <input type="checkbox" name="course" value="Twin ve 5. Sınıf Fen Bilimleri Dersi 8/22 11.30-12.00">
+                </td>
+                <td>
+                    Twin ve IB PYP<br>
+                    <input type="checkbox" name="course" value="Twin ve IB PYP 8/23 11.30-12.00">
+                </td>
+            </tr>
+            <tr>
+                <td>12:00-13:00</td>
+                <td colspan="5">Öğle Arası</td>
+            </tr>
+            <tr>
+                <td>13:00-13:30</td>
+                <td>
+                    İntro<br>
+                    <input type="checkbox" name="course" value="İntro 8/19 13.00-13.30">
+                </td>
+                <td>
+                    İntro<br>
+                    <input type="checkbox" name="course" value="İntro 8/20 13.00-13.30">
+                </td>
+                <td>
+                    İntro<br>
+                    <input type="checkbox" name="course" value="İntro 8/21 13.00-13.30">
+                </td>
+                <td>
+                    İntro<br>
+                    <input type="checkbox" name="course" value="İntro 8/22 13.00-13.30">
+                </td>
+                <td>
+                    İntro<br>
+                    <input type="checkbox" name="course" value="İntro 8/23 13.00-13.30">
+                </td>
+            </tr>
+            <tr>
+                <td>13.45-14.15</td>
+                <td>
+                    Twin Öğrenci Uygulaması<br>
+                    <input type="checkbox" name="course" value="Twin Öğrenci Uygulaması 8/19 13.45-14.15">
+                </td>
+                <td>
+                    Twin STEM Kit (Art)<br>
+                    <input type="checkbox" name="course" value="Twin STEM Kit (Art) 8/20 13.45-14.15">
+                </td>
+                <td>
+                    Twin ve 1. Sınıf Dersleri<br>
+                    <input type="checkbox" name="course" value="Twin ve 1. Sınıf Dersleri 8/21 13.45-14.15">
+                </td>
+                <td>
+                    Twin ve 6. Sınıf Fen Bilimleri Dersi<br>
+                    <input type="checkbox" name="course" value="Twin ve 6. Sınıf Fen Bilimleri Dersi 8/22 13.45-14.15">
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14.30-15.00</td>
+                <td>
+                    Twin Öğretmen Topluluğu<br>
+                    <input type="checkbox" name="course" value="Twin Öğretmen Topluluğu 8/19 14.30-15.00">
+                </td>
+                <td>
+                    Twin STEM Kit (S4S)<br>
+                    <input type="checkbox" name="course" value="Twin STEM Kit (S4S) 8/20 14.30-15.00">
+                </td>
+                <td>
+                    Twin ve 2. Sınıf Dersleri<br>
+                    <input type="checkbox" name="course" value="Twin ve 2. Sınıf Dersleri 8/21 14.30-15.00">
+                </td>
+                <td>
+                    Twin ve 7. Sınıf Fen Bilimleri Dersi<br>
+                    <input type="checkbox" name="course" value="Twin ve 7. Sınıf Fen Bilimleri Dersi 8/22 14.30-15.00">
+                </td>
+                <td>
+                    Twin ve Sürdürülebilir Kalkınma Hedefleri<br>
+                    <input type="checkbox" name="course" value="Twin ve Sürdürülebilir Kalkınma Hedefleri 8/23 14.30-15.00">
+                </td>
+            </tr>
+            <tr>
+                <td>15.15-15.45</td>
+                <td>
+                    Twin Ders Planları<br>
+                    <input type="checkbox" name="course" value="Twin Ders Planları 8/19 15.15-15.45">
+                </td>
+                <td>
+                    Twin STEM Kit (R&C)<br>
+                    <input type="checkbox" name="course" value="Twin STEM Kit (R&C) 8/20 15.15-15.45">
+                </td>
+                <td>
+                    Twin ve 3. Sınıf Fen Bilimleri Dersi<br>
+                    <input type="checkbox" name="course" value="Twin ve 3. Sınıf Fen Bilimleri Dersi 8/21 15.15-15.45">
+                </td>
+                <td></td>
+                <td>
+                    Twin ve Cambridge Programı<br>
+                    <input type="checkbox" name="course" value="Twin ve Cambridge Programı 8/23 15.15-15.45">
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <button type="submit">Kaydol</button>
+    </form>
+
+    <script>
+        function showAlert() {
+            alert("Kaydınız tamamlanmıştır");
+            return true;
+        }
+    </script>
+
+</body>
+</html>
